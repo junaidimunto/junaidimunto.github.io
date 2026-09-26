@@ -36,26 +36,28 @@
 				</div>
 				<div>
 					<pre><code>
-&lt;select id="the-province" name="prov"&gt;&lt;/select&gt;
-&lt;select id="the-regency" name="regc"&gt;&lt;/select&gt;
-&lt;select id="the-district" name="dist"&gt;
-  &lt;option&gt;Silahkan pilih kecamatan&lt;/option&gt;
-&lt;/select&gt;
-&lt;select id="the-village" name="vill"&gt;&lt;/select&gt;
+<span class="text-success">&lt;select</span> <span class="text-danger">id</span>="the-province" <span class="text-danger">name</span>="prov"<span class="text-success">&gt;&lt;/select&gt;</span>
+<span class="text-success">&lt;select</span> <span class="text-danger">id</span>="the-regency" <span class="text-danger">name</span>="regc"<span class="text-success">&gt;&lt;/select&gt;</span>
+<span class="text-success">&lt;select</span> <span class="text-danger">id</span>="the-district" <span class="text-danger">name</span>="dist"<span class="text-success">&gt;</span>
+  <span class="text-success">&lt;option&gt;</span>Silahkan pilih kecamatan<span class="text-success">&lt;/option&gt;</span>
+<span class="text-success">&lt;/select&gt;</span>
+<span class="text-success">&lt;select</span> <span class="text-danger">id</span>="the-village" <span class="text-danger">name</span>="vill"<span class="text-success">&gt;&lt;/select&gt;</span>
 
-&lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js">&lt;/script&gt;
-&lt;script&gt;
-  const wilayah = new Wilayah("the-province", "the-regency", "the-district", "the-village");
-  wilayah.performFetchingProvinces();
-  wilayah.performChangingSelect();
-&lt;/script&gt;</code></pre>
+<span class="text-success">&lt;script</span> <span class="text-danger">src</span>="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js"<span class="text-success">>&lt;/script&gt;</span>
+<span class="text-success">&lt;script&gt;</span>
+  <span class="text-primary">const</span> wilayah = <span class="text-success">new</span> Wilayah("the-province", "the-regency", "the-district", "the-village");
+  wilayah.<span class="text-primary">performFetchingProvinces</span>();
+  wilayah.<span class="text-primary">performChangingSelect</span>();
+<span class="text-success">&lt;/script&gt;</span></code></pre>
 					<h6 class="text-danger">Notes:</h6>
 					<ol class="list ps-3">
 						<li>This minimalist tag <code> &lt;select id="the-id"&gt;&lt;/select&gt; </code> will automatically create attribute <code> name="the-id" </code> identic to the id, but not if was defined before.</li>
 						<li>The instance <code>Wilayah()</code> has 4 optional parameters that contains selector id for province, regency, district, and village, respectively. Leaving it blank will automaticalaly create id and name <code>provinceSelect</code>, <code>regencySelect</code>, <code>districtSelect</code>, and <code>villageSelect</code>, respectively.</li>
+						<li>The function <code>performFetchingProvinces()</code> should be explicitly called to fetch initial provinces list option.</li>
+						<li>The function <code>performChangingSelect()</code> should be explicitly called to add event listener "change" for each selects.</li>
 					</ol>
 				</div>
-				<script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js"></script>
 				<script>
 					 const wilayah = new Wilayah("the-province", "the-regency", "the-district", "the-village");
 					 wilayah.performFetchingProvinces();
@@ -71,25 +73,26 @@
 						wilayahku.printRegencySelect("Pilih Kabupaten/Kota", "form-select mb-2", "required");
 						wilayahku.printDistrictSelect("Pilih Kecamatan/Distrik", "form-select mb-2", "required");
 						wilayahku.printVillageSelect("Pilih Desa/Kelurahan", "form-select mb-2");
-						wilayahku.config.warnUnselectedOption = true;
 						wilayahku.performChangingSelect();
 					</script>
 				</div>
 					<pre><code>
-&lt;div class="some-classes"&gt;
-  &lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js">&lt;/script&gt;
-  &lt;script&gt;
-    const wilayahku = new Wilayah("theProvince", "theRegency", "theDistrict", "theVillage");
-    wilayahku.printProvinceSelect("Pilih Provinsi", "your-class form-select mb-2", "required");
-    wilayahku.printRegencySelect("Pilih Kabupaten/Kota", "form-select mb-2", "required");
-    wilayahku.printDistrictSelect("Pilih Kecamatan/Distrik", "form-select mb-2", "required");
-    wilayahku.printVillageSelect("Pilih Desa/Kelurahan", "form-select mb-2");
-    wilayahku.config.warnUnselectedOption = true;
-    wilayahku.performChangingSelect();
-  &lt;/script&gt;
-&lt;div&gt;</code></pre>
+<span class="text-success">&lt;div</span> <span class="text-danger">class</span>="some-classes"<span class="text-success">&gt;</span>
+  <span class="text-success">&lt;script</span> <span class="text-danger">src</span>="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js"<span class="text-success">>&lt;/script&gt;</span>
+  <span class="text-success">&lt;script&gt;</span>
+    <span class="text-primary">const</span> wilayahku = <span class="text-success">new</span> Wilayah</span>("theProvince", "theRegency", "theDistrict", "theVillage");
+    wilayahku.<span class="text-primary">printProvinceSelect</span>("Pilih Provinsi", "your-class form-select mb-2", "required");
+    wilayahku.<span class="text-primary">printRegencySelect</span>("Pilih Kabupaten/Kota", "form-select mb-2", "required");
+    wilayahku.<span class="text-primary">printDistrictSelect</span>("Pilih Kecamatan/Distrik", "form-select mb-2", "required");
+    wilayahku.<span class="text-primary">printVillageSelect</span>("Pilih Desa/Kelurahan", "form-select mb-2");
+    wilayahku.<span class="text-primary">performChangingSelect</span>();
+  <span class="text-success">&lt;/script&gt;</span>
+<span class="text-success">&lt;div&gt;</span></code></pre>
 				<h6 class="text-danger">Notes:</h6>
-				<p>Under review</p>
+				<ol class="list ps-3">
+					<li>The instance <code>Wilayah()</code> has 4 optional parameters that contains selector id for province, regency, district, and village, respectively. Leaving it blank will automaticalaly create id and name <code>provinceSelect</code>, <code>regencySelect</code>, <code>districtSelect</code>, and <code>villageSelect</code>, respectively.</li>
+					<li>The function <code>performChangingSelect()</code> should be explicitly called to add event listener "change" for each selects.</li>
+				</ol>
       </div>
       <div class="col col-md-4">
         <h4 class="fs-4 mb-4">Flexible spot</h4>
@@ -128,24 +131,25 @@
 				</div>
 				<script>wilayahmu.performChangingSelect();</script>
 				<pre><code>
-&lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js">&lt;/script&gt;
-&lt;div class="row mb-2"&gt;
-  &lt;div class="col-3"&gt;Province&lt;/div&gt;
-  &lt;div class="col-9"&gt;&lt;script&gt;wilayahmu.printProvinceSelect("Choose the province ...", "form-select or-other-css-class-here", "required");&lt;/script&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row mb-2"&gt;
-  &lt;div class="col-3"&gt;Regency&lt;/div&gt;
-  &lt;div class="col-9"&gt;&lt;script&gt;wilayahmu.printRegencySelect("Choose regency ...", "form-select", "required");&lt;/script&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row mb-2"&gt;
-  &lt;div class="col-3"&gt;District&lt;/div&gt;
-  &lt;div class="col-9"&gt;&lt;script&gt;wilayahmu.printDistrictSelect("Choose district ...", "form-select", "required");&lt;/script&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row mb-2"&gt;
-  &lt;div class="col-3"&gt;Village&lt;/div&gt;
-  &lt;div class="col-9"&gt;&lt;script>wilayahmu.printVillageSelect("Choose village ...", "form-select", "required");&lt;/script&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;wilayahmu.performChangingSelect();&lt;/script&gt;
+<span class="text-success">&lt;script</span> <span class="text-danger">src</span>="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js"<span class="text-success">>&lt;/script&gt;</span>
+<span class="text-success">&lt;script&gt;</span><span class="text-primary">const</span> wilayahmu = <span class="text-success">new</span> Wilayah("province-id", "regency-id", "district-id", "village-id");<span class="text-success">&lt;/script&gt;</span>
+<span class="text-success">&lt;div</span> <span class="text-danger">class</span>="row mb-2"<span class="text-success">&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-3"<span class="text-success">&gt;</span>Province<span class="text-success">&lt;/div&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-9"<span class="text-success">&gt;&lt;script&gt;</span>wilayahmu.<span class="text-primary">printProvinceSelect</span>("Choose the province ...", "form-select or-other-css-class-here", "required");<span class="text-success">&lt;/script&gt;&lt;/div&gt;</span>
+<span class="text-success">&lt;/div&gt;</span>
+<span class="text-success">&lt;div</span> <span class="text-danger">class</span>="row mb-2"<span class="text-success">&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-3"<span class="text-success">&gt;</span>Regency<span class="text-success">&lt;/div&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-9"<span class="text-success">&gt;&lt;script&gt;</span>wilayahmu.<span class="text-primary">printRegencySelect</span>("Choose regency ...", "form-select", "required");<span class="text-success">&lt;/script&gt;&lt;/div&gt;</span>
+<span class="text-success">&lt;/div&gt;</span>
+<span class="text-success">&lt;div</span> <span class="text-danger">class</span>="row mb-2"<span class="text-success">&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-3"<span class="text-success">&gt;</span>District<span class="text-success">&lt;/div&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-9"<span class="text-success">&gt;&lt;script&gt;</span>wilayahmu.<span class="text-primary">printDistrictSelect</span>("Choose district ...", "form-select", "required");<span class="text-success">&lt;/script&gt;&lt;/div&gt;</span>
+<span class="text-success">&lt;/div&gt;</span>
+<span class="text-success">&lt;div</span> <span class="text-danger">class</span>="row mb-2"<span class="text-success">&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-3"<span class="text-success">&gt;</span>Village<span class="text-success">&lt;/div&gt;</span>
+  <span class="text-success">&lt;div</span> <span class="text-danger">class</span>="col-9"<span class="text-success">&gt;&lt;script></span>wilayahmu.<span class="text-primary">printVillageSelect</span>("Choose village ...", "form-select", "required");<span class="text-success">&lt;/script&gt;&lt;/div&gt;</span>
+<span class="text-success">&lt;/div&gt;</span>
+<span class="text-success">&lt;script&gt;</span>wilayahmu.<span class="text-primary">performChangingSelect</span>();<span class="text-success">&lt;/script&gt;</span>
 				</code></pre>
 				<h6 class="text-danger">Notes:</h6>
 				<p>Under review</p>
