@@ -43,7 +43,7 @@
 &lt;/select&gt;
 &lt;select id="the-village" name="vill"&gt;&lt;/select&gt;
 
-&lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js">&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js">&lt;/script&gt;
 &lt;script&gt;
   const wilayah = new Wilayah("the-province", "the-regency", "the-district", "the-village");
   wilayah.performFetchingProvinces();
@@ -55,7 +55,7 @@
 						<li>The instance <code>Wilayah()</code> has 4 optional parameters that contains selector id for province, regency, district, and village, respectively. Leaving it blank will automaticalaly create id and name <code>provinceSelect</code>, <code>regencySelect</code>, <code>districtSelect</code>, and <code>villageSelect</code>, respectively.</li>
 					</ol>
 				</div>
-				<script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js"></script>
 				<script>
 					 const wilayah = new Wilayah("the-province", "the-regency", "the-district", "the-village");
 					 wilayah.performFetchingProvinces();
@@ -71,12 +71,13 @@
 						wilayahku.printRegencySelect("Pilih Kabupaten/Kota", "form-select mb-2", "required");
 						wilayahku.printDistrictSelect("Pilih Kecamatan/Distrik", "form-select mb-2", "required");
 						wilayahku.printVillageSelect("Pilih Desa/Kelurahan", "form-select mb-2");
+						wilayahku.config.warnUnselectedOption = true;
 						wilayahku.performChangingSelect();
 					</script>
 				</div>
 					<pre><code>
 &lt;div class="some-classes"&gt;
-  &lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js">&lt;/script&gt;
+  &lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js">&lt;/script&gt;
   &lt;script&gt;
     const wilayahku = new Wilayah("theProvince", "theRegency", "theDistrict", "theVillage");
     wilayahku.printProvinceSelect("Pilih Provinsi", "your-class form-select mb-2", "required");
@@ -126,7 +127,7 @@
 				</div>
 				<script>wilayahmu.performChangingSelect();</script>
 				<pre><code>
-&lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@4036918/Wilayah.js">&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/junaidimunto/simple-library@6bc472f/Wilayah.js">&lt;/script&gt;
 &lt;div class="row mb-2"&gt;
   &lt;div class="col-3"&gt;Province&lt;/div&gt;
   &lt;div class="col-9"&gt;&lt;script&gt;wilayahmu.printProvinceSelect("Choose the province ...", "form-select or-other-css-class-here", "required");&lt;/script&gt;&lt;/div&gt;
